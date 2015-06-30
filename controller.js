@@ -1,6 +1,8 @@
 $(window).load(function(){
-
-	var cavas = new Canvas
+	var canvas = new Canvas
 	var centroid = new Centroid
 	var points = new Points
+
+	points.randData()
+	centroid.randCentroid()
 })
