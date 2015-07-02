@@ -3,8 +3,10 @@ $(window).load(function(){
 	var centroid = new Centroid
 	var points = new Points
 
-	var data = points.randData()
-	centroid.randCentroid()
+	var data = [points.randData(), centroid.randCentroid()]
+
+	// console.log(mergeObj(data))
+	// centroid.randCentroid()
 	view.appendD3()
-	view.scatterPlot(data)
+	view.plotData(mergeObj(data))
 })

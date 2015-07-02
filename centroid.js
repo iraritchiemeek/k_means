@@ -7,7 +7,7 @@ Centroid.prototype.randCentroid = function() {
 	for (var i = 0; i < 2; i++){
 	    var x = Math.random() * 20
 	    var y = Math.random() * 20
-	    this.centroid.push({"type": "centroid", "x": x, "y": y, "cluster": this.clusters[randIndex(this.clusters)] })
+	    this.centroid.push({"type": "centroid", "x": x, "y": y, "cluster": this.clusters[Math.floor(Math.random() * this.clusters.length)] })
 	}
-	console.log(this.centroid)
+	return this.centroid
 };

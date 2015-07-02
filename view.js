@@ -1,6 +1,6 @@
 function View () {
-	this.width = 400
-	this.height = 400
+	this.width = 600
+	this.height = 600
 }
 
 View.prototype.appendD3 = function() {
@@ -10,19 +10,27 @@ View.prototype.appendD3 = function() {
 		.attr("height", this.height);
 };
 
-View.prototype.scatterPlot = function(data) {
+View.prototype.plotData = function(data) {
+	console.log(data)
 	this.svg.selectAll("circle")
 	   .data(data)
 	   .enter()
 	   .append("circle")
 	   .attr("cx", function(d) {
-	   		return (d["x"] * 20)
+	   		return (d["x"] * 30)
 	   })
 	   .attr("cy", function(d) {
-	   		return (d["y"]*20)
+	   		return (d["y"] * 30)
 	   })
 	   .attr("r", 5)
-	   .attr("background-color", "grey")
+	   .attr("fill", function(d){
+	   		if(d["type"] == "centroid") {
+			   	console.log(d)
+	   			return "black"
+	   		} else {
+	   			return "red"
+	   		}
+	   });
 };
 
 
