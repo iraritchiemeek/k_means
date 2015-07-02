@@ -8,5 +8,5 @@ Points.prototype.randData = function() {
 	    var y = Math.random() * 20
 	    this.data.push({"type": "point", "x": x, "y": y, "cluster": null })
 	}
-	console.log(this.data)
+	return this.data
 };

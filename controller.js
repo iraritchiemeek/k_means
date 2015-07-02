@@ -1,8 +1,10 @@
 $(window).load(function(){
-	var canvas = new Canvas
+	var view = new View
 	var centroid = new Centroid
 	var points = new Points
 
-	points.randData()
+	var data = points.randData()
 	centroid.randCentroid()
+	view.appendD3()
+	view.scatterPlot(data)
 })
