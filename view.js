@@ -11,7 +11,6 @@ View.prototype.appendD3 = function() {
 };
 
 View.prototype.plotData = function(data) {
-	console.log(data)
 	this.svg.selectAll("circle")
 	   .data(data)
 	   .enter()
@@ -25,7 +24,6 @@ View.prototype.plotData = function(data) {
 	   .attr("r", 5)
 	   .attr("fill", function(d){
 	   		if(d["type"] == "centroid") {
-			   	console.log(d)
 	   			return "black"
 	   		} else {
 	   			return "red"
